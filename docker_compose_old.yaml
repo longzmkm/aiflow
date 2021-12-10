@@ -1,0 +1,18 @@
+services:
+  rabbitmq:
+    image: rabbitmq:management
+    expose:
+      - 5672
+      - 15672
+    environment:
+        RABBITMQ_DEFAULT_USER: airflow
+        RABBITMQ_DEFAULT_PASS: yey123456
+        RABBITMQ_DEFAULT_VHOST: airflow
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:15672"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    ports:
+      - 15672:15672
+    restart: always

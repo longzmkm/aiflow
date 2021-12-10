@@ -1,0 +1,28 @@
+[2021-12-06 01:30:36,457] {processor.py:163} INFO - Started process (PID=50812) to work on /opt/airflow/dags/download_price.py
+[2021-12-06 01:30:36,459] {processor.py:625} INFO - Processing file /opt/airflow/dags/download_price.py for tasks to queue
+[2021-12-06 01:30:36,460] {logging_mixin.py:109} INFO - [2021-12-06 01:30:36,460] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/download_price.py
+[2021-12-06 01:30:36,500] {logging_mixin.py:109} INFO - [2021-12-06 01:30:36,495] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/download_price.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_price.py", line 6, in <module>
+    import yfinance as yf
+ModuleNotFoundError: No module named 'yfinance'
+[2021-12-06 01:30:36,521] {processor.py:639} WARNING - No viable dags retrieved from /opt/airflow/dags/download_price.py
+[2021-12-06 01:30:36,531] {processor.py:171} INFO - Processing /opt/airflow/dags/download_price.py took 0.078 seconds
+[2021-12-06 01:31:06,699] {processor.py:163} INFO - Started process (PID=50871) to work on /opt/airflow/dags/download_price.py
+[2021-12-06 01:31:06,701] {processor.py:625} INFO - Processing file /opt/airflow/dags/download_price.py for tasks to queue
+[2021-12-06 01:31:06,703] {logging_mixin.py:109} INFO - [2021-12-06 01:31:06,703] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/download_price.py
+[2021-12-06 01:31:06,751] {logging_mixin.py:109} INFO - [2021-12-06 01:31:06,745] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/download_price.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_price.py", line 6, in <module>
+    import yfinance as yf
+ModuleNotFoundError: No module named 'yfinance'
+[2021-12-06 01:31:06,778] {processor.py:639} WARNING - No viable dags retrieved from /opt/airflow/dags/download_price.py
+[2021-12-06 01:31:06,787] {processor.py:171} INFO - Processing /opt/airflow/dags/download_price.py took 0.092 seconds

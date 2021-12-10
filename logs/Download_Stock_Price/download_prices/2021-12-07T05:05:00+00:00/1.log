@@ -1,0 +1,23 @@
+[2021-12-08 05:05:01,398] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: Download_Stock_Price.download_prices scheduled__2021-12-07T05:05:00+00:00 [queued]>
+[2021-12-08 05:05:01,414] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: Download_Stock_Price.download_prices scheduled__2021-12-07T05:05:00+00:00 [queued]>
+[2021-12-08 05:05:01,415] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-08 05:05:01,415] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-12-08 05:05:01,416] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-08 05:05:01,435] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): download_prices> on 2021-12-07 05:05:00+00:00
+[2021-12-08 05:05:01,442] {standard_task_runner.py:52} INFO - Started process 32347 to run task
+[2021-12-08 05:05:01,446] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'scheduled__2021-12-07T05:05:00+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/download_stick_price.py', '--cfg-path', '/tmp/tmpsvec07mz', '--error-file', '/tmp/tmpuz1n_0qm']
+[2021-12-08 05:05:01,447] {standard_task_runner.py:77} INFO - Job 52: Subtask download_prices
+[2021-12-08 05:05:01,497] {logging_mixin.py:109} INFO - Running <TaskInstance: Download_Stock_Price.download_prices scheduled__2021-12-07T05:05:00+00:00 [running]> on host 48b97d3f8617
+[2021-12-08 05:05:01,552] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=tlzmkm@gmail.com
+AIRFLOW_CTX_DAG_OWNER=tl
+AIRFLOW_CTX_DAG_ID=Download_Stock_Price
+AIRFLOW_CTX_TASK_ID=download_prices
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-07T05:05:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-07T05:05:00+00:00
+[2021-12-08 05:05:04,052] {python.py:152} INFO - Done. Returned value was: ['MSFT', 'GE']
+[2021-12-08 05:05:04,079] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=Download_Stock_Price, task_id=download_prices, execution_date=20211207T050500, start_date=20211208T050501, end_date=20211208T050504
+[2021-12-08 05:05:04,131] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-08 05:05:04,182] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

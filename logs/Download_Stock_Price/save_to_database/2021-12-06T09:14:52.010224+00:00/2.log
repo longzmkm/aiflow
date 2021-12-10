@@ -1,0 +1,66 @@
+[2021-12-06 09:15:27,441] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: Download_Stock_Price.save_to_database manual__2021-12-06T09:14:52.010224+00:00 [queued]>
+[2021-12-06 09:15:27,457] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: Download_Stock_Price.save_to_database manual__2021-12-06T09:14:52.010224+00:00 [queued]>
+[2021-12-06 09:15:27,458] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-06 09:15:27,459] {taskinstance.py:1242} INFO - Starting attempt 2 of 2
+[2021-12-06 09:15:27,460] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-06 09:15:27,484] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): save_to_database> on 2021-12-06 09:14:52.010224+00:00
+[2021-12-06 09:15:27,490] {standard_task_runner.py:52} INFO - Started process 3375 to run task
+[2021-12-06 09:15:27,496] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'Download_Stock_Price', 'save_to_database', 'manual__2021-12-06T09:14:52.010224+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/download_stick_price.py', '--cfg-path', '/tmp/tmpw_q4sirq', '--error-file', '/tmp/tmp5ptjl60t']
+[2021-12-06 09:15:27,498] {standard_task_runner.py:77} INFO - Job 47: Subtask save_to_database
+[2021-12-06 09:15:27,569] {logging_mixin.py:109} INFO - Running <TaskInstance: Download_Stock_Price.save_to_database manual__2021-12-06T09:14:52.010224+00:00 [running]> on host 48b97d3f8617
+[2021-12-06 09:15:27,635] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=tlzmkm@gmail.com
+AIRFLOW_CTX_DAG_OWNER=tl
+AIRFLOW_CTX_DAG_ID=Download_Stock_Price
+AIRFLOW_CTX_TASK_ID=save_to_database
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-06T09:14:52.010224+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-12-06T09:14:52.010224+00:00
+[2021-12-06 09:15:27,637] {taskinstance.py:1703} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 151, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 162, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/download_stick_price.py", line 66, in save_to_psql_stage
+    print(vars(context))
+TypeError: vars() argument must have __dict__ attribute
+[2021-12-06 09:15:27,659] {taskinstance.py:1280} INFO - Marking task as FAILED. dag_id=Download_Stock_Price, task_id=save_to_database, execution_date=20211206T091452, start_date=20211206T091527, end_date=20211206T091527
+[2021-12-06 09:15:27,674] {standard_task_runner.py:91} ERROR - Failed to execute job 47 for task save_to_database
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 292, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 151, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 162, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/download_stick_price.py", line 66, in save_to_psql_stage
+    print(vars(context))
+TypeError: vars() argument must have __dict__ attribute
+[2021-12-06 09:15:27,711] {local_task_job.py:154} INFO - Task exited with return code 1
+[2021-12-06 09:15:27,748] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,42 @@
+[2021-12-06 02:19:03,826] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: Download_Stock_Price.download_prices manual__2021-12-06T02:18:56.236115+00:00 [queued]>
+[2021-12-06 02:19:03,853] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: Download_Stock_Price.download_prices manual__2021-12-06T02:18:56.236115+00:00 [queued]>
+[2021-12-06 02:19:03,854] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-06 02:19:03,855] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-12-06 02:19:03,856] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-06 02:19:03,873] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): download_prices> on 2021-12-06 02:18:56.236115+00:00
+[2021-12-06 02:19:03,880] {standard_task_runner.py:52} INFO - Started process 101 to run task
+[2021-12-06 02:19:03,887] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2021-12-06T02:18:56.236115+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/download_stick_price.py', '--cfg-path', '/tmp/tmp35mxqffm', '--error-file', '/tmp/tmpkcug2_up']
+[2021-12-06 02:19:03,888] {standard_task_runner.py:77} INFO - Job 20: Subtask download_prices
+[2021-12-06 02:19:03,951] {logging_mixin.py:109} INFO - Running <TaskInstance: Download_Stock_Price.download_prices manual__2021-12-06T02:18:56.236115+00:00 [running]> on host a7052e8078d2
+[2021-12-06 02:19:04,018] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=tlzmkm@gmail.com
+AIRFLOW_CTX_DAG_OWNER=tl
+AIRFLOW_CTX_DAG_ID=Download_Stock_Price
+AIRFLOW_CTX_TASK_ID=download_prices
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-06T02:18:56.236115+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-12-06T02:18:56.236115+00:00
+[2021-12-06 02:19:04,026] {logging_mixin.py:109} INFO - yfinance.Ticker object <MSFT>
+[2021-12-06 02:19:05,618] {logging_mixin.py:109} INFO - <class 'pandas.core.frame.DataFrame'>
+[2021-12-06 02:19:05,619] {logging_mixin.py:109} INFO - (9007, 7)
+[2021-12-06 02:19:05,639] {logging_mixin.py:109} INFO -                   Open        High  ...  Dividends  Stock Splits
+Date                                ...                         
+1986-03-13    0.055898    0.064119  ...        0.0           0.0
+1986-03-14    0.061378    0.064667  ...        0.0           0.0
+1986-03-17    0.063570    0.065215  ...        0.0           0.0
+1986-03-18    0.064667    0.065215  ...        0.0           0.0
+1986-03-19    0.063022    0.063570  ...        0.0           0.0
+...                ...         ...  ...        ...           ...
+2021-11-29  334.940002  339.029999  ...        0.0           0.0
+2021-11-30  335.320007  337.779999  ...        0.0           0.0
+2021-12-01  335.130005  339.279999  ...        0.0           0.0
+2021-12-02  330.299988  333.489990  ...        0.0           0.0
+2021-12-03  331.989990  332.700012  ...        0.0           0.0
+
+[9007 rows x 7 columns]
+[2021-12-06 02:19:05,640] {logging_mixin.py:109} INFO - Downloaded MSFT
+[2021-12-06 02:19:05,641] {python.py:152} INFO - Done. Returned value was: []
+[2021-12-06 02:19:05,667] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=Download_Stock_Price, task_id=download_prices, execution_date=20211206T021856, start_date=20211206T021903, end_date=20211206T021905
+[2021-12-06 02:19:05,695] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-06 02:19:05,745] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

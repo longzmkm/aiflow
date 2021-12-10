@@ -1,0 +1,2 @@
+yfinance==0.1.63
+apache-airflow-providers-postgres==2.3.0
